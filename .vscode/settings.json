@@ -1,0 +1,11 @@
+{
+    "deno.enable": true,
+    "deno.lint": true,
+    "deno.unstable": false,
+    "deno.suggest.imports.hosts": {
+        "https://esm.sh": false,
+        "https://esm.r": false,
+        "https://esm.run": false
+    },
+    "deno.config": "./deno.json"
+}
