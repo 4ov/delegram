@@ -31,6 +31,18 @@ class Bot {
         })
     }
 
+    type(subtype : UpdateSubtype | UpdateSubtype[], ...callbacks : Callback[]){
+        const updateSubtypes = asArray(subtype)
+        updateSubtypes.forEach(updateSbutype=>{
+            this.inject_rule({
+                callbacks,
+                chatType : null,
+                subtype : updateSbutype,
+                type : null
+            })
+        })
+    }
+
     use(...callbacks : Callback[]){
 
         this.inject_rule({
